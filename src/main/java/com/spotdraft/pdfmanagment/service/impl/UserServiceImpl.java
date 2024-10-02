@@ -204,5 +204,11 @@ public class UserServiceImpl implements UserService {
         user.setVerified(true);
     }
 
+    
+    @Override
+    public void updateEmployeeVerification(User user) {
+        user.setVerified(true);
+    }
+
 
 }
