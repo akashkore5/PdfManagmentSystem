@@ -20,7 +20,6 @@ public class Utility {
 
      /**
      * Retrieves the base WebSite URL from the HttpServletRequest.
-     *
      * @param request the HttpServletRequest object
      * @return the base site URL
      */
