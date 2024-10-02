@@ -26,4 +26,6 @@ public interface UserService {
     boolean isVerified(User user);
 
     void updateVerification(User customer);
+    
+    void updateEmployeeVerification(User customer);
 }
