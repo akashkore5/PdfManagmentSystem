@@ -17,4 +17,15 @@ public class Utility {
         String siteURL = request.getRequestURL().toString();
         return siteURL.replace(request.getServletPath(), "");
     }
+
+     /**
+     * Retrieves the base WebSite URL from the HttpServletRequest.
+     *
+     * @param request the HttpServletRequest object
+     * @return the base site URL
+     */
+    public static String getWebsiteSiteURL(HttpServletRequest request) {
+        String siteURL = request.getRequestURL().toString();
+        return siteURL.replace(request.getServletPath(), "");
+    }
 }
