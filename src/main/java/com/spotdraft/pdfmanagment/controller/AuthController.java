@@ -101,17 +101,6 @@ public class AuthController {
     }
 
 
-    
-
-    // handler method to handle user registration form request
-    @GetMapping("/setRegister")
-    public String showSetRegistrationForm(Model model){
-        // create model object to store form data
-        UserDto user = new UserDto();
-        model.addAttribute("user", user);
-        return "register";
-    }
-
 
     // handler method to handle user registration form request
     @GetMapping("/register")
@@ -128,7 +117,13 @@ public class AuthController {
         model.addAttribute("message", "Please try again ...");
         return "error";
     }
-
+ @GetMapping("/expectederror")
+    public String gotExpectedError(Model model){
+        // create model object to store form data
+        model.addAttribute("error", "Got Unexpected error");
+        model.addAttribute("message", "Please try again ...");
+        return "error";
+    }
     // handler method to handle user registration form submit request
     @PostMapping("/register/save")
     public String registration(@Valid @ModelAttribute("user") UserDto userDto,
